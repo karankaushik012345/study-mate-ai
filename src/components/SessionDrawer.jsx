@@ -87,7 +87,7 @@ export function SessionDrawer({
               <button
                 type="button"
                 onClick={() => onSaveDeck(activeDeck)}
-                className="w-full p-3 rounded-xl border border-dashed border-indigo-300 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-950/60 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors"
+                className="w-full p-3 rounded-2xl border border-dashed border-emerald-300 dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-950/30 text-emerald-800 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 text-xs font-bold flex items-center justify-center space-x-2 transition-colors"
               >
                 <PlusCircle className="w-4 h-4" />
                 <span>Save Active Deck to Local Storage</span>
@@ -106,9 +106,9 @@ export function SessionDrawer({
                 return (
                   <div
                     key={deck.id}
-                    className={`p-3.5 rounded-xl border transition-all ${
+                    className={`p-3.5 rounded-2xl border transition-all ${
                       isActive
-                        ? 'border-indigo-500 bg-indigo-50/40 dark:bg-indigo-950/30'
+                        ? 'border-emerald-500 bg-emerald-50/40 dark:bg-emerald-950/30 ring-1 ring-emerald-500/30'
                         : 'border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50 hover:border-zinc-300 dark:hover:border-zinc-700'
                     }`}
                   >
@@ -134,8 +134,8 @@ export function SessionDrawer({
                           className="cursor-pointer grow space-y-0.5"
                         >
                           <div className="flex items-center space-x-1.5">
-                            <BookOpen className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
-                            <h4 className="font-semibold text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 hover:text-indigo-600 transition-colors">
+                            <BookOpen className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                            <h4 className="font-semibold text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 hover:text-emerald-600 transition-colors">
                               {deck.title}
                             </h4>
                           </div>

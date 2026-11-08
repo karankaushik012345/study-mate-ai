@@ -118,10 +118,10 @@ export function FlashcardBlock({ flashcards }) {
         <div>
           <div className="flex items-center space-x-2">
             <h3 className="text-xl font-extrabold text-zinc-900 dark:text-zinc-50 flex items-center space-x-2">
-              <RotateCw className="w-5 h-5 text-indigo-500" />
+              <RotateCw className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
               <span>Interactive Active-Recall Cards</span>
             </h3>
-            <span className="text-xs px-2.5 py-0.5 rounded-full font-bold bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+            <span className="text-xs px-2.5 py-0.5 rounded-full font-bold bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
               {progressPercent}% Mastered
             </span>
           </div>
@@ -182,7 +182,7 @@ export function FlashcardBlock({ flashcards }) {
       {/* Progress Bar */}
       <div className="w-full bg-zinc-100 dark:bg-zinc-800 h-2 rounded-full overflow-hidden">
         <div
-          className="bg-gradient-to-r from-indigo-500 to-violet-600 h-full transition-all duration-300 ease-out"
+          className="bg-gradient-to-r from-emerald-500 to-teal-600 h-full transition-all duration-300 ease-out"
           style={{ width: `${((currentIndex + 1) / (filteredCards.length || 1)) * 100}%` }}
         />
       </div>
@@ -192,7 +192,7 @@ export function FlashcardBlock({ flashcards }) {
           <p className="text-sm font-semibold">No flashcards match the "{filterMode}" filter.</p>
           <button
             onClick={() => setFilterMode('all')}
-            className="text-xs text-indigo-600 dark:text-indigo-400 underline font-bold"
+            className="text-xs text-emerald-600 dark:text-emerald-400 underline font-bold"
           >
             Show all flashcards
           </button>
@@ -221,9 +221,9 @@ export function FlashcardBlock({ flashcards }) {
                 }`}
               >
                 {/* Front of Card */}
-                <div className="absolute inset-0 backface-hidden w-full h-full bg-gradient-to-b from-white via-zinc-50/50 to-zinc-100/50 dark:from-zinc-900 dark:via-zinc-900/90 dark:to-zinc-950 border-2 border-zinc-200/90 dark:border-zinc-750 group-hover:border-indigo-500 dark:group-hover:border-indigo-500 rounded-3xl p-6 sm:p-9 flex flex-col justify-between shadow-xl transition-all">
+                <div className="absolute inset-0 backface-hidden w-full h-full bg-gradient-to-b from-white via-zinc-50/50 to-zinc-100/50 dark:from-zinc-900 dark:via-zinc-900/90 dark:to-zinc-950 border-2 border-zinc-200/90 dark:border-zinc-750 group-hover:border-emerald-500 dark:group-hover:border-emerald-500 rounded-3xl p-6 sm:p-9 flex flex-col justify-between shadow-xl transition-all">
                   <div className="flex items-center justify-between text-xs font-bold text-zinc-400 dark:text-zinc-500">
-                    <span className="flex items-center space-x-1.5 uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+                    <span className="flex items-center space-x-1.5 uppercase tracking-wider text-emerald-700 dark:text-emerald-400 font-extrabold">
                       <HelpCircle className="w-4 h-4" />
                       <span>Recall Prompt</span>
                     </span>
@@ -261,13 +261,13 @@ export function FlashcardBlock({ flashcards }) {
                 </div>
 
                 {/* Back of Card */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full bg-gradient-to-b from-indigo-50/90 via-white to-violet-50/60 dark:from-indigo-950/60 dark:via-zinc-900 dark:to-zinc-950 border-2 border-indigo-400 dark:border-indigo-600 rounded-3xl p-6 sm:p-9 flex flex-col justify-between shadow-xl transition-all">
-                  <div className="flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400">
+                <div className="absolute inset-0 backface-hidden rotate-y-180 w-full h-full bg-gradient-to-b from-emerald-50/90 via-white to-teal-50/60 dark:from-emerald-950/60 dark:via-zinc-900 dark:to-zinc-950 border-2 border-emerald-500 dark:border-emerald-600 rounded-3xl p-6 sm:p-9 flex flex-col justify-between shadow-xl transition-all">
+                  <div className="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400">
                     <span className="flex items-center space-x-1.5 uppercase tracking-wider">
                       <Sparkles className="w-4 h-4" />
                       <span>Synthesis & Answer</span>
                     </span>
-                    <span className="px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">
+                    <span className="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-200">
                       {currentIndex + 1} of {filteredCards.length}
                     </span>
                   </div>

@@ -39,7 +39,7 @@ export function OverviewBlock({ deck }) {
         {/* Floating Badges on Top */}
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-xs">
           <span className="px-3 py-1 rounded-full font-bold bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-white backdrop-blur-md border border-white/20 shadow-md flex items-center space-x-1.5">
-            <span className="w-2 h-2 rounded-full bg-indigo-500" />
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
             <span>{visuals.badge}</span>
           </span>
 
@@ -53,7 +53,7 @@ export function OverviewBlock({ deck }) {
 
         {/* Title over Banner */}
         <div className="absolute bottom-4 left-4 right-4 text-white">
-          <div className="flex items-center space-x-2 text-indigo-300 text-xs font-semibold mb-1">
+          <div className="flex items-center space-x-2 text-emerald-300 text-xs font-semibold mb-1">
             <BookMarked className="w-3.5 h-3.5" />
             <span className="uppercase tracking-widest">{deck.topic}</span>
           </div>
@@ -70,14 +70,14 @@ export function OverviewBlock({ deck }) {
           <div className="p-3 rounded-2xl bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-100 dark:border-zinc-800/80">
             <span className="text-[11px] font-medium text-zinc-400 block">Est. Duration</span>
             <span className="text-sm sm:text-base font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center space-x-1">
-              <Clock className="w-3.5 h-3.5 text-indigo-500" />
+              <Clock className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
               <span>{deck.estimatedMinutes} mins</span>
             </span>
           </div>
           <div className="p-3 rounded-2xl bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-100 dark:border-zinc-800/80">
             <span className="text-[11px] font-medium text-zinc-400 block">Interactive Cards</span>
             <span className="text-sm sm:text-base font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center space-x-1">
-              <Layers className="w-3.5 h-3.5 text-violet-500" />
+              <Layers className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
               <span>{deck.flashcards?.length || 0} items</span>
             </span>
           </div>
@@ -109,7 +109,7 @@ export function OverviewBlock({ deck }) {
               <h3 className="font-extrabold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
                 Core Competencies Checklist
               </h3>
-              <span className="font-bold text-indigo-600 dark:text-indigo-400">
+              <span className="font-bold text-emerald-600 dark:text-emerald-400">
                 {completedCount} of {totalObjectives} completed
               </span>
             </div>

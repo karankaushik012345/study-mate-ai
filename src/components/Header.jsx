@@ -31,17 +31,17 @@ export function Header({ isDark, onToggleDark, onOpenSessions, onOpenSimulator, 
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Brand / Logo with Real Product Icon */}
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/25 ring-2 ring-indigo-500/20">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-600 to-emerald-700 flex items-center justify-center shadow-lg shadow-emerald-500/20 ring-2 ring-emerald-500/20">
             <GraduationCap className="w-5 h-5 text-white" />
           </div>
           <div>
             <div className="flex items-center space-x-2">
               <span className="font-extrabold text-lg text-zinc-900 dark:text-white tracking-tight">
-                StudyMate<span className="text-indigo-600 dark:text-indigo-400">.ai</span>
+                StudyMate<span className="text-emerald-600 dark:text-emerald-400">.ai</span>
               </span>
-              <span className="text-[10px] px-2 py-0.5 rounded-full font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 flex items-center space-x-1">
+              <span className="text-[10px] px-2 py-0.5 rounded-full font-bold bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 flex items-center space-x-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Pro Suite</span>
+                <span>Scholar Pro</span>
               </span>
             </div>
             <p className="text-[11px] text-zinc-500 dark:text-zinc-400 hidden sm:block">
@@ -62,13 +62,13 @@ export function Header({ isDark, onToggleDark, onOpenSessions, onOpenSimulator, 
             {isMuted ? (
               <VolumeX className="w-4 h-4 text-zinc-400" />
             ) : (
-              <Volume2 className="w-4 h-4 text-indigo-500" />
+              <Volume2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             )}
           </button>
 
           {/* Active Provider Badge */}
           <div className="hidden md:flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-zinc-100/80 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800">
-            <Cpu className="w-3.5 h-3.5 text-indigo-500" />
+            <Cpu className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
             <span className="capitalize">{backendHealth.provider}</span>
           </div>
 
@@ -103,7 +103,7 @@ export function Header({ isDark, onToggleDark, onOpenSessions, onOpenSimulator, 
 
           {/* Student Avatar Icon */}
           <div className="hidden lg:flex items-center pl-1 border-l border-zinc-200 dark:border-zinc-800">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 text-white font-bold text-xs flex items-center justify-center ring-2 ring-white dark:ring-zinc-900 shadow-xs" title="Logged in as Student">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-emerald-600 to-teal-700 text-white font-bold text-xs flex items-center justify-center ring-2 ring-white dark:ring-zinc-900 shadow-xs" title="Logged in as Student">
               KK
             </div>
           </div>

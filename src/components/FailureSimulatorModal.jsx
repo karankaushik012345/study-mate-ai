@@ -45,7 +45,7 @@ export function FailureSimulatorModal({ isOpen, onClose, onTestMode }) {
       title: 'Stale Request Race Condition',
       description: 'Fires slow Request #1 (takes 3s) and immediate Request #2 (300ms). Proves Request #1 NEVER overwrites newer state!',
       icon: ArrowRightLeft,
-      color: 'text-indigo-500 bg-indigo-50 dark:bg-indigo-950/60 border-indigo-200 dark:border-indigo-800'
+      color: 'text-emerald-700 bg-emerald-50 dark:bg-emerald-950/60 border-emerald-200 dark:border-emerald-800'
     }
   ];
 
@@ -87,14 +87,14 @@ export function FailureSimulatorModal({ isOpen, onClose, onTestMode }) {
                 key={item.mode}
                 type="button"
                 onClick={() => handleSelect(item.mode)}
-                className="text-left p-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-400 dark:hover:border-indigo-600 bg-zinc-50/50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 transition-all flex flex-col justify-between space-y-3 group"
+                className="text-left p-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 bg-zinc-50/50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 transition-all flex flex-col justify-between space-y-3 group"
               >
                 <div className="space-y-1.5">
                   <div className="flex items-center space-x-2">
                     <span className={`p-2 rounded-xl border ${item.color}`}>
                       <IconComponent className="w-4 h-4" />
                     </span>
-                    <span className="font-semibold text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    <span className="font-semibold text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
                       {item.title}
                     </span>
                   </div>
@@ -103,7 +103,7 @@ export function FailureSimulatorModal({ isOpen, onClose, onTestMode }) {
                   </p>
                 </div>
 
-                <div className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 flex items-center space-x-1 pt-1">
+                <div className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 flex items-center space-x-1 pt-1">
                   <span>Trigger Simulation</span>
                   <span>→</span>
                 </div>

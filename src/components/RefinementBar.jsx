@@ -23,11 +23,11 @@ export function RefinementBar({ onRefine, isRefining }) {
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-50/70 to-violet-50/70 dark:from-zinc-900 dark:to-zinc-900 rounded-2xl border border-indigo-200/80 dark:border-zinc-800 p-4 sm:p-5 shadow-xs space-y-3 transition-colors">
-      <div className="flex items-center space-x-2 text-indigo-900 dark:text-indigo-300">
-        <Wand2 className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+    <div className="bg-gradient-to-r from-emerald-50/70 to-teal-50/70 dark:from-zinc-900 dark:to-zinc-900 rounded-3xl border border-emerald-200/80 dark:border-zinc-800 p-5 shadow-xs space-y-3 transition-colors">
+      <div className="flex items-center space-x-2 text-emerald-950 dark:text-emerald-300">
+        <Wand2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
         <span className="text-xs sm:text-sm font-bold">Refine This Study Deck (Follow-up Loop)</span>
-        <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">
+        <span className="text-[10px] px-2.5 py-0.5 rounded-full font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">
           Stateful
         </span>
       </div>
@@ -39,13 +39,13 @@ export function RefinementBar({ onRefine, isRefining }) {
           onChange={(e) => setInstruction(e.target.value)}
           placeholder="e.g. 'Add 2 harder questions on CAP theorem' or 'Make definitions shorter'..."
           disabled={isRefining}
-          className="grow px-3.5 py-2 text-xs sm:text-sm rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all disabled:opacity-60"
+          className="grow px-4 py-2.5 text-xs sm:text-sm rounded-2xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 transition-all disabled:opacity-60 shadow-inner"
         />
 
         <button
           type="submit"
           disabled={isRefining || !instruction.trim()}
-          className="flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm shrink-0"
+          className="flex items-center space-x-1.5 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-md shadow-emerald-600/25 shrink-0"
         >
           {isRefining ? (
             <>

@@ -52,7 +52,7 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
         {/* Label & Presets */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
           <label htmlFor="notes-input" className="text-sm font-bold text-zinc-900 dark:text-zinc-100 flex items-center space-x-2">
-            <BookOpen className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+            <BookOpen className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span>Paste your lecture notes, syllabus, or topic</span>
           </label>
           <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 sm:pb-0 text-xs">
@@ -64,9 +64,9 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
                   key={preset.label}
                   type="button"
                   onClick={() => handleSelectPreset(preset.text)}
-                  className="whitespace-nowrap px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/60 text-zinc-700 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-indigo-300 transition-all border border-zinc-200/60 dark:border-zinc-750 flex items-center space-x-1.5 font-medium shadow-2xs"
+                  className="whitespace-nowrap px-3 py-1 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 text-zinc-700 dark:text-zinc-300 hover:text-emerald-700 dark:hover:text-emerald-300 transition-all border border-zinc-200/60 dark:border-zinc-750 flex items-center space-x-1.5 font-medium shadow-2xs"
                 >
-                  <Icon className="w-3.5 h-3.5 text-indigo-500" />
+                  <Icon className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>{preset.label}</span>
                 </button>
               );
@@ -84,7 +84,7 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
             onKeyDown={handleKeyDown}
             placeholder="e.g. Paste notes on Photosynthesis, AWS IAM Policies, or write 'Explain Quantum Computing fundamentals'..."
             disabled={isLoading}
-            className="w-full p-4 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 bg-zinc-50/80 dark:bg-zinc-950/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 dark:focus:border-indigo-500 transition-all resize-y disabled:opacity-60 shadow-inner"
+            className="w-full p-4 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 bg-zinc-50/80 dark:bg-zinc-950/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 dark:focus:border-emerald-500 transition-all resize-y disabled:opacity-60 shadow-inner"
           />
           {inputText && (
             <button
@@ -108,7 +108,7 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
                 checked={streamEnabled}
                 onChange={(e) => { sound.playClick(); setStreamEnabled(e.target.checked); }}
                 disabled={isLoading}
-                className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800"
+                className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800"
               />
               <span className="flex items-center space-x-1 font-bold">
                 <Zap className="w-3.5 h-3.5 text-amber-500" />
@@ -123,7 +123,7 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
                 value={provider}
                 onChange={(e) => { sound.playClick(); setProvider(e.target.value); }}
                 disabled={isLoading}
-                className="bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 text-xs font-semibold rounded-xl px-2.5 py-1 focus:outline-none focus:ring-1 focus:ring-indigo-500 shadow-2xs"
+                className="bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 text-xs font-semibold rounded-xl px-2.5 py-1 focus:outline-none focus:ring-1 focus:ring-emerald-500 shadow-2xs"
               >
                 <option value="auto">Auto Detect</option>
                 <option value="gemini">Google Gemini</option>
@@ -160,7 +160,7 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
             <button
               type="submit"
               disabled={isLoading || !inputText.trim()}
-              className="flex items-center space-x-2 px-6 py-3 rounded-2xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-indigo-500/25"
+              className="flex items-center space-x-2 px-6 py-3 rounded-2xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-emerald-600/25"
             >
               {isLoading ? (
                 <>

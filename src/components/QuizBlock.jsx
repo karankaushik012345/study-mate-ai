@@ -165,7 +165,7 @@ export function QuizBlock({ quiz }) {
       {/* Progress Bar */}
       <div className="w-full bg-zinc-100 dark:bg-zinc-800 h-2 rounded-full overflow-hidden">
         <div
-          className="bg-gradient-to-r from-indigo-500 to-violet-600 h-full transition-all duration-300 ease-out"
+          className="bg-gradient-to-r from-emerald-500 to-teal-600 h-full transition-all duration-300 ease-out"
           style={{ width: `${((currentIndex + (isCompleted ? 1 : 0)) / questions.length) * 100}%` }}
         />
       </div>
@@ -192,7 +192,7 @@ export function QuizBlock({ quiz }) {
                 : 'Keep Practicing!'}
             </h4>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              You answered <span className="font-extrabold text-indigo-600 dark:text-indigo-400">{totalCorrect}</span> out of{' '}
+              You answered <span className="font-extrabold text-emerald-600 dark:text-emerald-400">{totalCorrect}</span> out of{' '}
               <span className="font-extrabold text-zinc-900 dark:text-zinc-100">{questions.length}</span> questions correctly.
             </p>
           </div>
@@ -224,7 +224,7 @@ export function QuizBlock({ quiz }) {
         /* Active Question Card */
         <div className="space-y-5">
           <div className="flex items-center justify-between text-xs font-bold text-zinc-400">
-            <span className="uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+            <span className="uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
               Question {currentIndex + 1} of {questions.length}
             </span>
             <span className="px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">
@@ -242,7 +242,7 @@ export function QuizBlock({ quiz }) {
               const isSelected = currentChosenIndex === idx;
               const isCorrectOption = idx === activeQuestion.correctIndex;
 
-              let btnStyle = 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-800 dark:text-zinc-200 hover:border-indigo-400 dark:hover:border-indigo-600 shadow-xs';
+              let btnStyle = 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 text-zinc-800 dark:text-zinc-200 hover:border-emerald-400 dark:hover:border-emerald-600 shadow-xs';
 
               if (hasAnsweredCurrent) {
                 if (isCorrectOption) {
@@ -286,9 +286,9 @@ export function QuizBlock({ quiz }) {
           {/* Explanation Callout after answering */}
           {hasAnsweredCurrent && (
             <div className="space-y-4 pt-2 animate-fadeIn">
-              <div className="p-4 sm:p-5 rounded-2xl bg-indigo-50/80 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800 text-xs sm:text-sm text-zinc-800 dark:text-zinc-200 space-y-1.5 shadow-xs">
-                <div className="flex items-center space-x-2 font-extrabold text-indigo-950 dark:text-indigo-200">
-                  <Info className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0" />
+              <div className="p-4 sm:p-5 rounded-2xl bg-emerald-50/80 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-xs sm:text-sm text-zinc-800 dark:text-zinc-200 space-y-1.5 shadow-xs">
+                <div className="flex items-center space-x-2 font-extrabold text-emerald-950 dark:text-emerald-200">
+                  <Info className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                   <span>Cognitive Rationale & Misconception Analysis:</span>
                 </div>
                 <p className="leading-relaxed pl-6 text-zinc-700 dark:text-zinc-300">{activeQuestion.explanation}</p>
@@ -299,7 +299,7 @@ export function QuizBlock({ quiz }) {
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="flex items-center space-x-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 active:scale-95 transition-all shadow-md shadow-indigo-500/25"
+                  className="flex items-center space-x-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition-all shadow-md shadow-emerald-600/25"
                 >
                   <span>{currentIndex < questions.length - 1 ? 'Next Question' : 'View Exam Results'}</span>
                   <ArrowRight className="w-4 h-4" />

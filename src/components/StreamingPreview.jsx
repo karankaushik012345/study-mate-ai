@@ -9,7 +9,7 @@ export function StreamingPreview({ streamBuffer, statusMessage }) {
   return (
     <div className="bg-zinc-900 text-zinc-200 rounded-2xl border border-zinc-800 p-4 shadow-md space-y-3 font-mono text-xs">
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2 text-indigo-400">
+        <div className="flex items-center space-x-2 text-emerald-400">
           <Zap className="w-4 h-4 animate-pulse text-amber-400" />
           <span className="font-semibold">{statusMessage || 'Streaming structured payload...'}</span>
         </div>
@@ -28,7 +28,7 @@ export function StreamingPreview({ streamBuffer, statusMessage }) {
 
       {/* Progress animation bar */}
       <div className="w-full bg-zinc-800 h-1 rounded-full overflow-hidden">
-        <div className="h-full bg-indigo-500 animate-pulse w-3/4 rounded-full" />
+        <div className="h-full bg-emerald-500 animate-pulse w-3/4 rounded-full" />
       </div>
 
       {showRaw && (

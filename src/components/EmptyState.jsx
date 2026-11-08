@@ -57,18 +57,18 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
       {/* Hero Banner with Social Proof */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         {/* Social Proof Badge */}
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-indigo-50/80 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800 shadow-xs">
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50/80 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800 shadow-xs">
           <div className="flex -space-x-1.5">
-            <span className="w-5 h-5 rounded-full bg-indigo-500 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">A</span>
-            <span className="w-5 h-5 rounded-full bg-violet-500 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">M</span>
-            <span className="w-5 h-5 rounded-full bg-pink-500 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">S</span>
+            <span className="w-5 h-5 rounded-full bg-emerald-600 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">A</span>
+            <span className="w-5 h-5 rounded-full bg-teal-600 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">M</span>
+            <span className="w-5 h-5 rounded-full bg-amber-500 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">S</span>
           </div>
           <span className="text-zinc-400">·</span>
           <span>Trusted by 14,000+ STEM & CS students</span>
         </div>
 
         <h1 className="text-3xl sm:text-5xl font-black text-zinc-900 dark:text-zinc-50 tracking-tight leading-tight">
-          Turn Unstructured Notes into <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">Active Recall Mastery</span>
+          Turn Unstructured Notes into <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-800 bg-clip-text text-transparent">Active Recall Mastery</span>
         </h1>
 
         <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto leading-relaxed">
@@ -86,7 +86,7 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
             <span><strong>Instant</strong> SSE Streaming</span>
           </div>
           <div className="flex items-center space-x-1.5">
-            <ShieldCheck className="w-4 h-4 text-indigo-500" />
+            <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span><strong>100%</strong> Zero Crash Guarantee</span>
           </div>
         </div>
@@ -97,7 +97,7 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-lg font-extrabold text-zinc-900 dark:text-zinc-100 flex items-center space-x-2">
-              <Sparkles className="w-4 h-4 text-indigo-500" />
+              <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               <span>Explore High-Yield Starter Decks</span>
             </h3>
             <p className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -111,7 +111,7 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
             <div
               key={idx}
               onClick={() => handlePick(deck.title)}
-              className="group cursor-pointer rounded-3xl border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden hover:border-indigo-500 dark:hover:border-indigo-500 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="group cursor-pointer rounded-3xl border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden hover:border-emerald-500 dark:hover:border-emerald-500 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               {/* Photo Header */}
               <div className="relative h-36 w-full overflow-hidden bg-zinc-950">
@@ -139,7 +139,7 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
                     <Star className="w-3.5 h-3.5 fill-amber-500" />
                     <span className="font-bold">{deck.rating}</span>
                   </div>
-                  <h4 className="font-extrabold text-sm sm:text-base text-zinc-900 dark:text-zinc-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug">
+                  <h4 className="font-extrabold text-sm sm:text-base text-zinc-900 dark:text-zinc-50 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors leading-snug">
                     {deck.title}
                   </h4>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2 leading-relaxed">
@@ -147,7 +147,7 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400">
+                <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400">
                   <span>Launch Study Deck</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -161,7 +161,7 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
       <div className="pt-6 border-t border-zinc-200/60 dark:border-zinc-800">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="p-4 rounded-2xl bg-zinc-50/80 dark:bg-zinc-950/40 border border-zinc-100 dark:border-zinc-800/80 space-y-2">
-            <div className="p-2.5 w-fit rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 shadow-xs">
+            <div className="p-2.5 w-fit rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 shadow-xs">
               <RotateCw className="w-4 h-4" />
             </div>
             <h5 className="font-extrabold text-xs text-zinc-900 dark:text-zinc-100">

@@ -28,7 +28,7 @@ export function CheatsheetBlock({ cheatsheet }) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50 flex items-center space-x-2">
-            <Bookmark className="w-5 h-5 text-indigo-500" />
+            <Bookmark className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             <span>High-Yield Cheatsheet & Formulas</span>
           </h3>
           <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
