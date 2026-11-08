@@ -1,14 +1,26 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.join(__dirname, '../dist');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
+
+// Serve static assets if production build exists
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+}
 
 // Determine available API provider
 const getAvailableProvider = () => {
@@ -462,6 +474,14 @@ app.get('/api/health', (req, res) => {
     availableModels: ['Mock Engine (Instant)', 'Gemini 1.5 Flash', 'Groq Llama 3.3', 'OpenAI GPT-4o-mini', 'Local Ollama']
   });
 });
+
+// Catch-all route to serve index.html for client-side routing in production
+if (fs.existsSync(distPath)) {
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) return next();
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`[StudyMate AI Backend] Listening on http://localhost:${PORT}`);
