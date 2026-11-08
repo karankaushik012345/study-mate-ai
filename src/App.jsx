@@ -15,6 +15,7 @@ import { FailureSimulatorModal } from './components/FailureSimulatorModal';
 import { SessionDrawer } from './components/SessionDrawer';
 import { ErrorState } from './components/ErrorState';
 import { EmptyState } from './components/EmptyState';
+import { StudyStreakWidget } from './components/StudyStreakWidget';
 
 import { RotateCcw, Sparkles, BookOpen, Layers, CheckCircle2, Bookmark } from 'lucide-react';
 
@@ -73,6 +74,9 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="grow max-w-5xl w-full mx-auto px-4 py-6 sm:py-8 space-y-6">
+        {/* Daily Study Streak & Goal Tracker */}
+        <StudyStreakWidget />
+
         {/* Input Section (Always accessible) */}
         <InputSection
           onGenerate={handleGenerate}
