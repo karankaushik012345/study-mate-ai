@@ -2,6 +2,11 @@
 
 > A modern, defensive React application that transforms unstructured lecture notes, articles, or topics into a stateful, interactive study toolkit (Flashcards, Quizzes with Targeted Re-Testing, and High-Yield Cheatsheets).
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-brightgreen?style=for-the-badge&logo=render)](https://study-mate-ai-phq1.onrender.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/karankaushik012345/study-mate-ai)
+
+### 🔗 **Live URL:** [https://study-mate-ai-phq1.onrender.com](https://study-mate-ai-phq1.onrender.com)
+
 Built for the **Frontend Internship Assignment**.
 
 ---
