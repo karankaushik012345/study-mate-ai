@@ -475,11 +475,14 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Catch-all route to serve index.html for client-side routing in production
+// Catch-all handler to serve index.html for client-side SPA routing in production
+// Compatible with both Express 4 and Express 5 (avoids path-to-regexp wildcard error)
 if (fs.existsSync(distPath)) {
-  app.get('*', (req, res, next) => {
-    if (req.path.startsWith('/api')) return next();
-    res.sendFile(path.join(distPath, 'index.html'));
+  app.use((req, res, next) => {
+    if (req.method === 'GET' && !req.path.startsWith('/api')) {
+      return res.sendFile(path.join(distPath, 'index.html'));
+    }
+    next();
   });
 }
 
