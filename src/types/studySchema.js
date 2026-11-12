@@ -255,6 +255,17 @@ export function validateStudyDeck(data) {
     estimatedMinutes,
     summary,
     keyTakeaways,
+    deepDive: data.deepDive && typeof data.deepDive === 'object' ? {
+      introduction: typeof data.deepDive.introduction === 'string' ? data.deepDive.introduction : '',
+      coreConceptsSections: Array.isArray(data.deepDive.coreConceptsSections)
+        ? data.deepDive.coreConceptsSections.filter(section => section && typeof section === 'object').map(section => ({
+          heading: typeof section.heading === 'string' ? section.heading : 'Core concept',
+          content: typeof section.content === 'string' ? section.content : ''
+        })) : [],
+      realWorldApplications: typeof data.deepDive.realWorldApplications === 'string' ? data.deepDive.realWorldApplications : '',
+      commonMisconceptions: typeof data.deepDive.commonMisconceptions === 'string' ? data.deepDive.commonMisconceptions : '',
+      furtherReadingTopics: Array.isArray(data.deepDive.furtherReadingTopics) ? data.deepDive.furtherReadingTopics.filter(item => typeof item === 'string') : []
+    } : null,
     flashcards,
     quiz,
     cheatsheet

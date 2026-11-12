@@ -48,6 +48,22 @@ JSON Structure:
     "Key takeaway 2",
     "Key takeaway 3"
   ],
+  "deepDive": {
+    "introduction": "A thorough 2-3 paragraph introduction to the topic. Cover the historical context, why it matters, and how it fits into the broader field.",
+    "coreConceptsSections": [
+      {
+        "heading": "Section Title (e.g. 'How It Works')",
+        "content": "2-3 paragraphs of clear, in-depth explanation. Use analogies and concrete examples where possible."
+      },
+      {
+        "heading": "Second Section Title",
+        "content": "Another 2-3 paragraphs diving deeper into a specific aspect."
+      }
+    ],
+    "realWorldApplications": "A detailed paragraph explaining where and how this topic is applied in industry, research, or everyday life. Include 2-3 real examples.",
+    "commonMisconceptions": "A paragraph describing the top 2-3 misconceptions people have about this topic, and why they are wrong.",
+    "furtherReadingTopics": ["Related Topic A", "Related Topic B", "Related Topic C"]
+  },
   "flashcards": [
     {
       "id": "fc-1",
@@ -74,7 +90,7 @@ JSON Structure:
   ]
 }
 
-Ensure at least 4 flashcards, at least 3 quiz questions, and at least 3 cheatsheet items.`;
+Ensure at least 4 flashcards, at least 3 quiz questions, at least 3 cheatsheet items, and at least 2 coreConceptsSections in deepDive.`;
 
 // Mock generator for testing without an API key or demo purposes
 const generateMockDeck = (input) => {

@@ -16,7 +16,71 @@
   }
 }
 
-/* Custom scrollbar styling */
+/* ─── Animated mesh gradient background ─── */
+@keyframes gradientDrift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-bg-dark {
+  background: linear-gradient(
+    -45deg,
+    #0a1a12,
+    #0d2b1e,
+    #0f3324,
+    #071a0f,
+    #122d1c,
+    #0a1f15
+  );
+  background-size: 500% 500%;
+  animation: gradientDrift 18s ease infinite;
+}
+
+.animated-bg-light {
+  background: linear-gradient(
+    -45deg,
+    #f0fdf4,
+    #ecfdf5,
+    #f0fdfa,
+    #fefce8,
+    #ecfdf5,
+    #f0fdf4
+  );
+  background-size: 500% 500%;
+  animation: gradientDrift 20s ease infinite;
+}
+
+/* ─── Floating orb blobs ─── */
+@keyframes floatA {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33%       { transform: translate(40px, -30px) scale(1.08); }
+  66%       { transform: translate(-20px, 20px) scale(0.96); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33%       { transform: translate(-35px, 25px) scale(1.05); }
+  66%       { transform: translate(30px, -15px) scale(0.98); }
+}
+@keyframes floatC {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50%       { transform: translate(20px, 35px) scale(1.06); }
+}
+
+.orb-a { animation: floatA 22s ease-in-out infinite; }
+.orb-b { animation: floatB 26s ease-in-out infinite; }
+.orb-c { animation: floatC 30s ease-in-out infinite; }
+
+/* ─── Fade-in animation for deck content ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeInUp 0.4s ease-out both;
+}
+
+/* ─── Custom scrollbar styling ─── */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
