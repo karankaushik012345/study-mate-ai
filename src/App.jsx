@@ -128,7 +128,7 @@ export default function App() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm p-3 sm:p-4 rounded-2xl border border-zinc-200/70 dark:border-zinc-800/70 shadow-xs">
                 <div className="flex items-center space-x-2 flex-wrap gap-y-1">
                   <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider mr-1">View:</span>
-                  <div className="flex items-center bg-zinc-100/80 dark:bg-zinc-800/80 p-0.5 rounded-xl text-xs font-medium flex-wrap gap-0.5">
+                  <div className="flex items-center bg-zinc-100/80 dark:bg-zinc-800/80 p-0.5 rounded-xl text-xs font-medium gap-0.5 max-w-full overflow-x-auto study-tabs">
                     {/* All Blocks */}
                     <button
                       type="button"
@@ -211,7 +211,7 @@ export default function App() {
               </div>
 
               {/* Block 1: Overview & Objectives (always visible) */}
-              <OverviewBlock deck={deck} />
+              {activeTab === 'all' && <OverviewBlock deck={deck} />}
 
               {/* Block 2: Deep Dive Explanation */}
               {(activeTab === 'all' || activeTab === 'deepdive') && (

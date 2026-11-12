@@ -80,6 +80,17 @@
   animation: fadeInUp 0.4s ease-out both;
 }
 
+.study-tabs { scrollbar-width: none; }
+.study-tabs::-webkit-scrollbar { display: none; }
+
+@media (max-width: 640px) {
+  .animated-bg-light, .animated-bg-dark { background-size: 300% 300%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+
 /* ─── Custom scrollbar styling ─── */
 ::-webkit-scrollbar {
   width: 8px;

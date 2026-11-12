@@ -265,7 +265,13 @@ export function validateStudyDeck(data) {
       realWorldApplications: typeof data.deepDive.realWorldApplications === 'string' ? data.deepDive.realWorldApplications : '',
       commonMisconceptions: typeof data.deepDive.commonMisconceptions === 'string' ? data.deepDive.commonMisconceptions : '',
       furtherReadingTopics: Array.isArray(data.deepDive.furtherReadingTopics) ? data.deepDive.furtherReadingTopics.filter(item => typeof item === 'string') : []
-    } : null,
+    } : {
+      introduction: summary || `Explore the essential ideas behind ${title} and how they connect to practical problem solving.`,
+      coreConceptsSections: (keyTakeaways.length ? keyTakeaways : [`Build a clear mental model of ${topic}.`, 'Connect the concept to practical examples.']).map((content, index) => ({ heading: index === 0 ? 'The core idea' : `Key concept ${index + 1}`, content })),
+      realWorldApplications: `Use these ideas to analyze real examples of ${topic}, explain your reasoning, and make informed decisions when conditions change.`,
+      commonMisconceptions: 'A definition alone is not the same as understanding. Check whether you can explain the idea in your own words and apply it to a new example.',
+      furtherReadingTopics: [`Applications of ${topic}`, `Advanced ${topic}`]
+    },
     flashcards,
     quiz,
     cheatsheet
