@@ -83,8 +83,12 @@
 .study-tabs { scrollbar-width: none; }
 .study-tabs::-webkit-scrollbar { display: none; }
 
+.study-input-panel { background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(18px); }
+.dark .study-input-panel { background: rgba(12, 28, 23, 0.94); }
+
 @media (max-width: 640px) {
   .animated-bg-light, .animated-bg-dark { background-size: 300% 300%; }
+  main { scroll-margin-top: 4rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

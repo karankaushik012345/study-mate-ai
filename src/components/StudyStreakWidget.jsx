@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Flame, Target, Trophy, Sparkles, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { Flame, Target, Trophy } from 'lucide-react';
 
 export function StudyStreakWidget() {
-  const [streakData, setStreakData] = useState(() => {
-    try {
-      const stored = localStorage.getItem('studymate_streak_v1');
-      if (stored) return JSON.parse(stored);
-    } catch {}
-    return {
-      streakDays: 4,
-      cardsToday: 14,
-      dailyGoal: 20,
-      xp: 420,
-      level: 'Level 2 · Curious Explorer'
-    };
-  });
+  const [streakData] = useState({ streakDays: 0, cardsToday: 0, dailyGoal: 20, xp: 0, level: 'Your study journey' });
 
   const percent = Math.min(100, Math.round((streakData.cardsToday / streakData.dailyGoal) * 100));
 
@@ -28,14 +16,14 @@ export function StudyStreakWidget() {
         <div>
           <div className="flex items-center space-x-1.5">
             <span className="font-extrabold text-sm text-zinc-900 dark:text-zinc-100">
-              {streakData.streakDays} Day Streak!
+              {streakData.streakDays} Day{streakData.streakDays === 1 ? '' : 's'} studied
             </span>
             <span className="text-[10px] px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-200 font-bold uppercase">
-              On Fire
+              {streakData.streakDays > 0 ? 'Active' : 'Get started'}
             </span>
           </div>
           <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
-            Study today to keep your streak alive
+            {streakData.cardsToday ? 'Nice progress. Keep going today.' : 'Complete a study session to start your progress.'}
           </p>
         </div>
       </div>

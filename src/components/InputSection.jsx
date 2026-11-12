@@ -47,7 +47,7 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
   };
 
   return (
-    <section className="bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 shadow-md p-5 sm:p-7 transition-colors space-y-4">
+    <section className="study-input-panel rounded-3xl border border-zinc-200/80 dark:border-emerald-900/60 shadow-xl shadow-zinc-950/5 dark:shadow-black/20 p-4 sm:p-7 transition-colors space-y-4">
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Label & Presets */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
@@ -78,13 +78,13 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
         <div className="relative">
           <textarea
             id="notes-input"
-            rows={4}
+            rows={5}
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="e.g. Paste notes on Photosynthesis, AWS IAM Policies, or write 'Explain Quantum Computing fundamentals'..."
             disabled={isLoading}
-            className="w-full p-4 text-sm text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 bg-zinc-50/80 dark:bg-zinc-950/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 dark:focus:border-emerald-500 transition-all resize-y disabled:opacity-60 shadow-inner"
+            className="w-full min-h-32 p-4 text-sm leading-6 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 bg-zinc-50 dark:bg-zinc-950/50 rounded-2xl border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 dark:focus:border-emerald-500 transition-all resize-y disabled:opacity-60"
           />
           {inputText && (
             <button
@@ -160,7 +160,7 @@ export function InputSection({ onGenerate, status, onCancel, lastInput }) {
             <button
               type="submit"
               disabled={isLoading || !inputText.trim()}
-              className="flex items-center space-x-2 px-6 py-3 rounded-2xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-emerald-600/25"
+              className="flex items-center justify-center space-x-2 px-5 sm:px-6 py-3 min-h-11 rounded-2xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-emerald-600/25 max-sm:w-full"
             >
               {isLoading ? (
                 <>

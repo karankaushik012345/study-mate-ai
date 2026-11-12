@@ -7,11 +7,7 @@ import {
   Zap,
   ArrowRight,
   Sparkles,
-  Users,
-  Star,
-  CheckCircle2,
-  TrendingUp,
-  Brain
+  CheckCircle2
 } from 'lucide-react';
 import { TOPIC_COLLECTIONS } from '../utils/topicImages';
 import { sound } from '../utils/soundEffects';
@@ -23,27 +19,21 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
       description: 'Reconciliation algorithm, time-slicing, stale closures in useEffect, and AbortController race-condition mitigation.',
       tag: 'Frontend Engineering',
       image: TOPIC_COLLECTIONS.frontend.thumbnail,
-      badge: 'Bestseller',
-      cardsCount: '15 Cards · 4 Quizzes',
-      rating: '4.9 (1.2k reviews)'
+      badge: 'Frontend',
     },
     {
       title: 'Distributed Systems & CAP Theorem',
       description: 'CP vs AP trade-offs, network partitions, quorum consensus (N/2 + 1), and Raft leader elections.',
       tag: 'System Design',
       image: TOPIC_COLLECTIONS.systems.thumbnail,
-      badge: 'High Yield',
-      cardsCount: '18 Cards · 5 Quizzes',
-      rating: '5.0 (980 reviews)'
+      badge: 'Systems',
     },
     {
       title: 'Mitochondrial Bioenergetics & ATP Synthase',
       description: 'Glycolysis in cytoplasm, Krebs cycle matrix reactions, and chemiosmotic electrochemical gradient.',
       tag: 'Bio & Medicine',
       image: TOPIC_COLLECTIONS.biology.thumbnail,
-      badge: 'Exam Cram',
-      cardsCount: '20 Cards · 6 Quizzes',
-      rating: '4.8 (850 reviews)'
+      badge: 'Biology',
     }
   ];
 
@@ -54,18 +44,9 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
 
   return (
     <div className="space-y-10 py-6">
-      {/* Hero Banner with Social Proof */}
+      {/* Product introduction */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
-        {/* Social Proof Badge */}
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50/80 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800 shadow-xs">
-          <div className="flex -space-x-1.5">
-            <span className="w-5 h-5 rounded-full bg-emerald-600 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">A</span>
-            <span className="w-5 h-5 rounded-full bg-teal-600 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">M</span>
-            <span className="w-5 h-5 rounded-full bg-amber-500 text-[10px] text-white font-bold flex items-center justify-center ring-2 ring-white dark:ring-zinc-900">S</span>
-          </div>
-          <span className="text-zinc-400">·</span>
-          <span>Trusted by 14,000+ STEM & CS students</span>
-        </div>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-50/80 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800"><Sparkles className="w-3.5 h-3.5"/>Your personal AI study workspace</div>
 
         <h1 className="text-3xl sm:text-5xl font-black text-zinc-900 dark:text-zinc-50 tracking-tight leading-tight">
           Turn Unstructured Notes into <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-800 bg-clip-text text-transparent">Active Recall Mastery</span>
@@ -75,19 +56,19 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
           Paste textbook chapters, code snippets, or lecture slides. StudyMate structures them into interactive 3D flashcards, quizzes with targeted re-testing, and cheatsheets.
         </p>
 
-        {/* Live Metric Stats Bar */}
+        {/* Product capabilities */}
         <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-xs text-zinc-500 dark:text-zinc-400">
           <div className="flex items-center space-x-1.5">
             <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-            <span><strong>94%</strong> Higher Retention</span>
+            <span><strong>Active recall</strong> flashcards</span>
           </div>
           <div className="flex items-center space-x-1.5">
             <Zap className="w-4 h-4 text-amber-500" />
-            <span><strong>Instant</strong> SSE Streaming</span>
+            <span><strong>Live</strong> deck generation</span>
           </div>
           <div className="flex items-center space-x-1.5">
             <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            <span><strong>100%</strong> Zero Crash Guarantee</span>
+            <span><strong>Saved</strong> study sessions</span>
           </div>
         </div>
       </div>
@@ -101,7 +82,7 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
               <span>Explore High-Yield Starter Decks</span>
             </h3>
             <p className="text-xs text-zinc-500 dark:text-zinc-400">
-              Click any deck to immediately test all interactive widgets with zero typing
+              Choose a topic to build a deck, or paste your own notes above.
             </p>
           </div>
         </div>
@@ -128,17 +109,13 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
                   {deck.badge}
                 </span>
                 <span className="absolute bottom-2.5 left-3 text-[11px] font-semibold text-zinc-200">
-                  {deck.cardsCount}
+                  Starter topic
                 </span>
               </div>
 
               {/* Card Body */}
               <div className="p-4 sm:p-5 space-y-2 grow flex flex-col justify-between">
                 <div className="space-y-1.5">
-                  <div className="flex items-center space-x-1 text-[11px] text-amber-500">
-                    <Star className="w-3.5 h-3.5 fill-amber-500" />
-                    <span className="font-bold">{deck.rating}</span>
-                  </div>
                   <h4 className="font-extrabold text-sm sm:text-base text-zinc-900 dark:text-zinc-50 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors leading-snug">
                     {deck.title}
                   </h4>
@@ -180,7 +157,7 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
               Targeted Re-Test Mode
             </h5>
             <p className="text-[11px] text-zinc-500 dark:text-zinc-400 leading-normal">
-              Filters down to only missed questions so students can drill until 100% mastery.
+              Revisit missed questions and reinforce concepts with focused practice.
             </p>
           </div>
 
@@ -201,10 +178,10 @@ export function EmptyState({ onSelectPreset, onLoadSample }) {
               <ShieldCheck className="w-4 h-4" />
             </div>
             <h5 className="font-extrabold text-xs text-zinc-900 dark:text-zinc-100">
-              Zero-Crash Defensive Engine
+              Resilient AI processing
             </h5>
             <p className="text-[11px] text-zinc-500 dark:text-zinc-400 leading-normal">
-              Heuristic bracket healing, schema bounds checking, and race condition immunity.
+              Your study content is checked and presented with graceful error handling.
             </p>
           </div>
         </div>

@@ -272,8 +272,8 @@ export default function App() {
         />
 
         {/* Footer */}
-        <footer className="border-t border-zinc-200/60 dark:border-zinc-800/60 py-6 text-center text-xs text-zinc-500 dark:text-zinc-400 mt-auto bg-white/30 dark:bg-zinc-900/30 backdrop-blur-sm">
-          <p>Built for the Frontend Internship Assignment · Defensive AI UI Architecture</p>
+        <footer className="border-t border-zinc-200/60 dark:border-zinc-800/60 py-6 px-4 text-center text-xs text-zinc-500 dark:text-zinc-400 mt-auto bg-white/30 dark:bg-zinc-900/30 backdrop-blur-sm">
+          <p>StudyMate AI <span className="mx-1.5">·</span> Make every study session count.</p>
         </footer>
       </div>
     </div>
